@@ -27,7 +27,25 @@ class PythonDress(object):
         # 服饰下 - 全部小分类
         opt_name_list = jsonpath.jsonpath(jsonobj, '$..opt_name')
         print(opt_name_list)
-       
+        # 服装下 - 衣服展示图(小图片)
+        thumb_url_list = jsonpath.jsonpath(jsonobj, '$..thumb_url')
+        print(thumb_url_list)
+        # 服装下 - 衣服展示图(中等图片)
+        hd_thumb_url_list = jsonpath.jsonpath(jsonobj, '$..hd_thumb_url')
+        print(hd_thumb_url_list)
+        # 服装下 - 商品名称
+        goods_name_list = jsonpath.jsonpath(jsonobj, '$..goods_name')
+        print(goods_name_list)
+        # 服装下 - 商品名称 - 商品简略名称
+        short_name_list = jsonpath.jsonpath(jsonobj, '$..short_name')
+        print(short_name_list)
+        # 服装下 - 商品id(goods_id)
+        goods_id_list = jsonpath.jsonpath(jsonobj, '$..goods_id')
+        print(goods_id_list)
+        # 服装下 - 商品价格
+        price_list = jsonpath.jsonpath(jsonobj, '$..price')
+        print(price_list)
+
 if __name__ == "__main__":
     pythonDress = PythonDress()
     pythonDress.get_mkdir()
