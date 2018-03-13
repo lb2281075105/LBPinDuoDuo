@@ -45,6 +45,9 @@ class PythonDress(object):
         # 服装下 - 商品价格
         price_list = jsonpath.jsonpath(jsonobj, '$..price')
         print(price_list)
+        # 服装下 - 已拼件数
+        cnt_list = jsonpath.jsonpath(jsonobj, '$..cnt')
+        print(cnt_list)
 
 if __name__ == "__main__":
     pythonDress = PythonDress()
